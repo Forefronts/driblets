@@ -42,7 +42,7 @@ const Navbar = () => {
         `}
       >
         {/* Main Navbar */}
-        <div className="mx-auto flex h-[72px] max-w-[1440px] items-center justify-between px-5 sm:px-8 lg:px-10">
+        <div className="mx-auto flex h-18 max-w-360 items-center justify-between px-5 sm:px-8 lg:px-10">
           {/* Logo */}
           <Link
             href="/"
@@ -132,7 +132,7 @@ const Navbar = () => {
             id="mobile-navigation"
             className="border-t border-white/10 md:hidden"
           >
-            <nav className="mx-auto flex max-w-[1440px] flex-col px-5 py-5 sm:px-8">
+            <nav className="mx-auto flex max-w-360 flex-col px-5 py-5 sm:px-8">
               <Link
                 href="#platform"
                 onClick={closeMobileMenu}
