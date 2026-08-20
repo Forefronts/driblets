@@ -3,6 +3,8 @@ import Navbar from "@/src/components/layout/NavBar"
 import About from "@/src/components/sections/About"
 import Features from "@/src/components/sections/Features"
 import ProductShowcase from "@/src/components/sections/ProductShowcase"
+import Testimonials from "@/src/components/sections/Testimonials"
+import Footer from "@/src/components/layout/Footer"
 
 
 export default function Home() {
@@ -13,6 +15,8 @@ export default function Home() {
       <About />
       <Features />
       <ProductShowcase />
+      <Testimonials />
+      <Footer />
 
     </main>
   )
