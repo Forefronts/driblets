@@ -18,9 +18,7 @@ const About = () => {
           </h2>
         </div>
 
-        {/* About Content */}
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-20">
-          {/* Image */}
           <div className="relative overflow-hidden rounded-xl">
             <Image
               src="/droplets.png"
@@ -32,7 +30,6 @@ const About = () => {
             />
           </div>
 
-          {/* Content */}
           <div className="flex flex-col items-start">
             <p className="mb-5 text-lg font-medium text-cyan-900">
               About Driblets
