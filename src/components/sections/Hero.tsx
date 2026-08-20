@@ -50,16 +50,22 @@ const Hero = () => {
             <div className="mt-8 flex justify-center">
               <a
                 href="#platform"
-                className="group flex items-center gap-4 rounded-full border border-white/10 bg-white/10 px-6 py-3 text-sm font-medium text-white backdrop-blur-md transition duration-300 hover:bg-white/15"
+                className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full border border-white/20 bg-white/8 px-6 py-3.5 text-sm font-medium text-white shadow-[0_8px_32px_rgba(0,0,0,0.18),inset_0_1px_0_rgba(255,255,255,0.2)] backdrop-blur-xl transition-all duration-500 hover:border-white/30 hover:bg-white/13 hover:shadow-[0_12px_40px_rgba(0,0,0,0.25),inset_0_1px_0_rgba(255,255,255,0.3)]"
               >
-                Start Your Journey
+                {/* Glass reflection */}
+                <span className="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/50 to-transparent opacity-70" />
 
-                <ArrowRight
-                  size={16}
-                  strokeWidth={1.8}
-                  className="transition-transform duration-300 group-hover:translate-x-1"
-                />
+                {/* Soft hover glow */}
+                <span className="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/8 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+
+                <span className="relative">Start Your Journey</span>
+                  <ArrowRight
+                    size={15}
+                    strokeWidth={1.8}
+                    className="transition-transform duration-300 group-hover:translate-x-0.5"
+                  />
               </a>
+
             </div>
           </div>
         </div>
