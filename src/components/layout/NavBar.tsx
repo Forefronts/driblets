@@ -88,10 +88,10 @@ const Navbar = () => {
             </Link>
 
             <Link
-              href="#services"
+              href="#testimonials"
               className="text-sm font-medium text-white/70 transition-colors hover:text-white"
             >
-              Services
+              Testimonials
             </Link>
           </nav>
 
