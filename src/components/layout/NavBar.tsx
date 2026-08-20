@@ -41,15 +41,15 @@ const Navbar = () => {
           }
         `}
       >
-        {/* Main Navbar */}
-        <div className="mx-auto flex h-18 max-w-360 items-center justify-between px-5 sm:px-8 lg:px-10">
-          {/* Logo */}
+
+        <div className="grid h-18 w-full grid-cols-[1fr_auto] items-center px-5 md:px-10 md:grid-cols-[1fr_auto_1fr]">
+
           <Link
             href="/"
             onClick={closeMobileMenu}
-            className="flex shrink-0 items-center gap-2"
+            className="flex w-fit items-center gap-2"
           >
-            <div className="relative h-8 w-8 overflow-hidden">
+            <div className="relative h-8 w-8 shrink-0">
               <Image
                 src="/logo.png"
                 alt="Driblets logo"
@@ -65,8 +65,7 @@ const Navbar = () => {
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden items-center gap-8 md:flex lg:gap-10">
+          <nav className="hidden items-center justify-center gap-8 md:flex lg:gap-10">
             <Link
               href="#platform"
               className="text-sm font-medium text-white/70 transition-colors hover:text-white"
@@ -97,11 +96,10 @@ const Navbar = () => {
           </nav>
 
           {/* Right Side */}
-          <div className="flex items-center gap-2 sm:gap-3">
-            {/* Hide CTA on very small screens */}
+          <div className="flex items-center justify-end gap-2">
             <Link
               href="#get-started"
-              className="hidden rounded-full border border-white/20 bg-white/5 px-4 py-2 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/10 sm:inline-flex lg:px-5 lg:py-2.5"
+              className="hidden items-center justify-center rounded-full border border-white/20 bg-white/5 px-5 py-2.5 text-sm font-medium text-white backdrop-blur-md transition-colors hover:bg-white/10 sm:inline-flex"
             >
               Get Started
             </Link>
@@ -110,12 +108,14 @@ const Navbar = () => {
             <button
               type="button"
               aria-label={
-                mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"
+                mobileMenuOpen
+                  ? "Close navigation menu"
+                  : "Open navigation menu"
               }
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-navigation"
               onClick={() => setMobileMenuOpen((prev) => !prev)}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white transition hover:bg-white/10 md:hidden"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white transition-colors hover:bg-white/10 md:hidden"
             >
               {mobileMenuOpen ? (
                 <X size={20} strokeWidth={1.8} />
@@ -126,17 +126,16 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div
             id="mobile-navigation"
             className="border-t border-white/10 md:hidden"
           >
-            <nav className="mx-auto flex max-w-360 flex-col px-5 py-5 sm:px-8">
+            <nav className="flex w-full flex-col px-5 py-5">
               <Link
                 href="#platform"
                 onClick={closeMobileMenu}
-                className="border-b border-white/10 py-4 text-sm font-medium text-white/75 transition hover:text-white"
+                className="border-b border-white/10 py-4 text-sm font-medium text-white/75 transition-colors hover:text-white"
               >
                 Platform
               </Link>
@@ -144,7 +143,7 @@ const Navbar = () => {
               <Link
                 href="#features"
                 onClick={closeMobileMenu}
-                className="border-b border-white/10 py-4 text-sm font-medium text-white/75 transition hover:text-white"
+                className="border-b border-white/10 py-4 text-sm font-medium text-white/75 transition-colors hover:text-white"
               >
                 Features
               </Link>
@@ -152,7 +151,7 @@ const Navbar = () => {
               <Link
                 href="#solutions"
                 onClick={closeMobileMenu}
-                className="border-b border-white/10 py-4 text-sm font-medium text-white/75 transition hover:text-white"
+                className="border-b border-white/10 py-4 text-sm font-medium text-white/75 transition-colors hover:text-white"
               >
                 Solutions
               </Link>
@@ -160,16 +159,15 @@ const Navbar = () => {
               <Link
                 href="#services"
                 onClick={closeMobileMenu}
-                className="py-4 text-sm font-medium text-white/75 transition hover:text-white"
+                className="py-4 text-sm font-medium text-white/75 transition-colors hover:text-white"
               >
                 Services
               </Link>
 
-              {/* CTA for tiny screens */}
               <Link
                 href="#get-started"
                 onClick={closeMobileMenu}
-                className="mt-3 flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/15 sm:hidden"
+                className="mt-3 flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-white/15 sm:hidden"
               >
                 Get Started
               </Link>
